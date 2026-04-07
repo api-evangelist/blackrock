@@ -1,7 +1,11 @@
 aid: blackrock
-url: https://raw.githubusercontent.com/api-evangelist/blackrock/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/blackrock/refs/heads/main/apis.yml
 modified: '2026-03-21'
 apis: []
 common:
   - type: Website
     url: https://www.blackrock.com
+description: >-
+  BlackRock is one of the world’s preeminent asset management firms and a premier
+  provider of investment management. Find out more information here.
