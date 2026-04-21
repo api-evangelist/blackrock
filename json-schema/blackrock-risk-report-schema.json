@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/blackrock/main/json-schema/blackrock-risk-report-schema.json",
+  "title": "BlackRock Aladdin Risk Report",
+  "description": "Schema for a risk analytics report from BlackRock Aladdin",
+  "type": "object",
+  "properties": {
+    "reportId": { "type": "string" },
+    "portfolioId": { "type": "string" },
+    "asOfDate": { "type": "string", "format": "date" },
+    "currency": { "type": "string" },
+    "riskMetrics": {
+      "type": "object",
+      "properties": {
+        "var95": { "type": "number", "description": "95% Value at Risk" },
+        "var99": { "type": "number", "description": "99% Value at Risk" },
+        "expectedShortfall": { "type": "number" },
+        "annualizedVolatility": { "type": "number" },
+        "trackingError": { "type": "number" },
+        "beta": { "type": "number" },
+        "durationYears": { "type": "number" },
+        "modifiedDuration": { "type": "number" }
+      }
+    },
+    "factorExposures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "factorName": { "type": "string" },
+          "exposure": { "type": "number" },
+          "contribution": { "type": "number" }
+        }
+      }
+    },
+    "stressTests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "scenarioName": { "type": "string" },
+          "pnlImpact": { "type": "number" },
+          "percentImpact": { "type": "number" }
+        }
+      }
+    }
+  },
+  "required": ["reportId", "portfolioId", "asOfDate"]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "BlackRock Aladdin Portfolio Structure",
+  "description": "JSON structure for a portfolio record in the Aladdin platform",
+  "fields": [
+    { "name": "portfolioId", "type": "string", "required": true },
+    { "name": "portfolioName", "type": "string", "required": true },
+    { "name": "currency", "type": "string", "required": true, "description": "ISO 4217 currency code" },
+    { "name": "totalMarketValue", "type": "number", "required": false },
+    { "name": "asOfDate", "type": "date", "required": true },
+    { "name": "benchmarkId", "type": "string", "required": false },
+    { "name": "managerId", "type": "string", "required": false },
+    { "name": "strategy", "type": "string", "required": false },
+    { "name": "positions", "type": "array<Position>", "required": false }
+  ]
+}

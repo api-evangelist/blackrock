@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/blackrock/main/json-schema/blackrock-portfolio-schema.json",
+  "title": "BlackRock Aladdin Portfolio",
+  "description": "Schema for a portfolio record in the BlackRock Aladdin platform",
+  "type": "object",
+  "properties": {
+    "portfolioId": {
+      "type": "string",
+      "description": "Unique portfolio identifier in Aladdin"
+    },
+    "portfolioName": {
+      "type": "string",
+      "description": "Display name of the portfolio"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Base currency (ISO 4217)",
+      "example": "USD"
+    },
+    "totalMarketValue": {
+      "type": "number",
+      "description": "Total market value of the portfolio in base currency"
+    },
+    "asOfDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Valuation date"
+    },
+    "benchmarkId": {
+      "type": "string",
+      "description": "Benchmark identifier for performance attribution"
+    },
+    "managerId": {
+      "type": "string",
+      "description": "Portfolio manager identifier"
+    },
+    "strategy": {
+      "type": "string",
+      "description": "Investment strategy or mandate"
+    },
+    "positions": {
+      "type": "array",
+      "description": "Holdings within the portfolio",
+      "items": {
+        "$ref": "#/$defs/Position"
+      }
+    }
+  },
+  "required": ["portfolioId", "portfolioName", "currency", "asOfDate"],
+  "$defs": {
+    "Position": {
+      "type": "object",
+      "properties": {
+        "securityId": { "type": "string" },
+        "identifier": { "type": "string", "description": "ISIN, CUSIP, or SEDOL" },
+        "quantity": { "type": "number" },
+        "marketValue": { "type": "number" },
+        "weight": { "type": "number", "description": "Weight as decimal (0-1)" },
+        "assetClass": { "type": "string" },
+        "currency": { "type": "string" }
+      }
+    }
+  }
+}

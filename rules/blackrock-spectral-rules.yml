@@ -1,0 +1,43 @@
+rules:
+  blackrock-portfolio-id-required:
+    description: Portfolio requests must include a portfolioId field
+    message: "{{description}}"
+    given: "$.components.schemas.*.properties"
+    then:
+      field: portfolioId
+      function: defined
+
+  blackrock-date-format:
+    description: Date fields must use ISO 8601 date format
+    message: "Date fields must specify format: date"
+    given: "$.components.schemas[*].properties[?(@.description =~ /date/i)]"
+    then:
+      field: format
+      function: pattern
+      functionOptions:
+        match: "^date"
+
+  blackrock-currency-iso:
+    description: Currency fields must be documented as ISO 4217
+    message: "Currency fields should reference ISO 4217"
+    given: "$.components.schemas[*].properties.currency"
+    then:
+      field: type
+      function: pattern
+      functionOptions:
+        match: "^string$"
+
+  blackrock-operations-have-summary:
+    description: All API operations must include a summary
+    message: "Operation is missing a summary"
+    given: "$.paths[*][*]"
+    then:
+      field: summary
+      function: truthy
+
+  blackrock-security-defined:
+    description: API must define at least one security scheme
+    message: "API must define security schemes"
+    given: "$.components.securitySchemes"
+    then:
+      function: truthy

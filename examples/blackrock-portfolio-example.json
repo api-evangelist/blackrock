@@ -1,0 +1,30 @@
+{
+  "portfolioId": "PORT-US-EQUITY-001",
+  "portfolioName": "US Large Cap Core Equity",
+  "currency": "USD",
+  "totalMarketValue": 1250000000.00,
+  "asOfDate": "2026-04-18",
+  "benchmarkId": "SP500",
+  "managerId": "MGR-00123",
+  "strategy": "US Large Cap Core Equity",
+  "positions": [
+    {
+      "securityId": "SEC-AAPL",
+      "identifier": "US0378331005",
+      "quantity": 450000,
+      "marketValue": 87750000,
+      "weight": 0.0702,
+      "assetClass": "Equity",
+      "currency": "USD"
+    },
+    {
+      "securityId": "SEC-MSFT",
+      "identifier": "US5949181045",
+      "quantity": 220000,
+      "marketValue": 92400000,
+      "weight": 0.0739,
+      "assetClass": "Equity",
+      "currency": "USD"
+    }
+  ]
+}

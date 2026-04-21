@@ -1,0 +1,58 @@
+name: BlackRock Aladdin API Capability
+description: >-
+  Naftiko capability definition for BlackRock Aladdin APIs providing portfolio
+  analytics, risk reporting, data access, and order management for institutional
+  asset managers.
+version: 1.0.0
+capabilities:
+  - name: getPortfolio
+    description: Retrieve portfolio composition, positions, and market values
+    method: GET
+    path: /portfolios/{portfolioId}
+    parameters:
+      - name: portfolioId
+        type: string
+        required: true
+      - name: asOfDate
+        type: date
+        required: false
+  - name: listPortfolios
+    description: List all portfolios accessible to the authenticated client
+    method: GET
+    path: /portfolios
+  - name: getRiskReport
+    description: Retrieve risk analytics report for a portfolio
+    method: GET
+    path: /portfolios/{portfolioId}/risk
+    parameters:
+      - name: portfolioId
+        type: string
+        required: true
+      - name: asOfDate
+        type: date
+        required: false
+  - name: runStressTest
+    description: Run a stress test scenario against a portfolio
+    method: POST
+    path: /portfolios/{portfolioId}/stress-tests
+  - name: getPerformance
+    description: Retrieve performance attribution for a portfolio
+    method: GET
+    path: /portfolios/{portfolioId}/performance
+  - name: submitOrder
+    description: Submit a trade order to the Aladdin OMS
+    method: POST
+    path: /orders
+  - name: getOrder
+    description: Retrieve status of a trade order
+    method: GET
+    path: /orders/{orderId}
+authentication:
+  type: oauth2
+  flows:
+    clientCredentials:
+      tokenUrl: https://aladdin.blackrock.com/oauth/token
+      scopes:
+        portfolios:read: Read portfolio data
+        risk:read: Read risk analytics
+        orders:write: Submit trade orders

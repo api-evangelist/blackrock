@@ -18,7 +18,7 @@ tags:
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 created: '2026-03-21'
-modified: '2026-04-19'
+modified: '2026-04-21'
 specificationVersion: '0.19'
 apis:
   - aid: blackrock:aladdin-api
@@ -41,6 +41,20 @@ apis:
       - type: SDK
         url: https://github.com/blackrock/aladdinsdk
         title: Python SDK (AladdinSDK)
+      - type: JSONSchema
+        url: json-schema/blackrock-portfolio-schema.json
+      - type: JSONSchema
+        url: json-schema/blackrock-risk-report-schema.json
+      - type: JSONStructure
+        url: json-structure/blackrock-portfolio-structure.json
+      - type: JSONStructure
+        url: json-structure/blackrock-risk-report-structure.json
+      - type: JSONLD
+        url: json-ld/blackrock-context.jsonld
+      - type: Example
+        url: examples/blackrock-portfolio-example.json
+      - type: Example
+        url: examples/blackrock-risk-report-example.json
 common:
   - type: Website
     url: https://www.blackrock.com
@@ -54,6 +68,12 @@ common:
     url: https://www.blackrock.com/us/individual/regulatory/privacy-policy
   - type: Blog
     url: https://www.blackrock.com/us/individual/insights
+  - type: SpectralRules
+    url: rules/blackrock-spectral-rules.yml
+  - type: NaftikoCapability
+    url: capabilities/blackrock-aladdin.yaml
+  - type: Vocabulary
+    url: vocabulary/blackrock-vocabulary.yaml
   - type: Features
     data:
       - name: Aladdin Risk Analytics

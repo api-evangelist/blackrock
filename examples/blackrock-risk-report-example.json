@@ -1,0 +1,27 @@
+{
+  "reportId": "RISK-PORT-US-EQUITY-001-20260418",
+  "portfolioId": "PORT-US-EQUITY-001",
+  "asOfDate": "2026-04-18",
+  "currency": "USD",
+  "riskMetrics": {
+    "var95": -0.0123,
+    "var99": -0.0187,
+    "expectedShortfall": -0.0215,
+    "annualizedVolatility": 0.1432,
+    "trackingError": 0.0234,
+    "beta": 1.04,
+    "durationYears": null,
+    "modifiedDuration": null
+  },
+  "factorExposures": [
+    { "factorName": "Market", "exposure": 1.04, "contribution": 0.0892 },
+    { "factorName": "Size", "exposure": -0.12, "contribution": -0.0043 },
+    { "factorName": "Value", "exposure": 0.08, "contribution": 0.0021 },
+    { "factorName": "Momentum", "exposure": 0.22, "contribution": 0.0112 }
+  ],
+  "stressTests": [
+    { "scenarioName": "2008 Financial Crisis", "pnlImpact": -312500000, "percentImpact": -0.25 },
+    { "scenarioName": "COVID-19 March 2020", "pnlImpact": -187500000, "percentImpact": -0.15 },
+    { "scenarioName": "+200bps Rate Shock", "pnlImpact": -25000000, "percentImpact": -0.02 }
+  ]
+}

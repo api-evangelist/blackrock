@@ -1,0 +1,46 @@
+name: BlackRock Aladdin API Vocabulary
+description: Key terms and concepts used in the BlackRock Aladdin platform and APIs
+terms:
+  - term: Aladdin
+    definition: >-
+      BlackRock's end-to-end investment management platform combining risk analytics,
+      portfolio management, trading, and operations capabilities used by institutional investors globally.
+  - term: AladdinSDK
+    definition: >-
+      Open-source Python SDK providing programmatic access to Aladdin APIs with authentication,
+      pagination, caching, and data transformation utilities.
+  - term: Value at Risk (VaR)
+    definition: >-
+      A statistical measure estimating the maximum expected loss of a portfolio over a
+      specified time period at a given confidence level (e.g., 95% or 99%).
+  - term: Tracking Error
+    definition: >-
+      The standard deviation of the difference between a portfolio's returns and its
+      benchmark returns, measuring active risk.
+  - term: Factor Exposure
+    definition: >-
+      The sensitivity of a portfolio to systematic risk factors such as market beta,
+      size, value, momentum, or interest rate duration.
+  - term: Stress Test
+    definition: >-
+      A simulation applying historical or hypothetical market shock scenarios to estimate
+      the portfolio impact under adverse conditions.
+  - term: Portfolio
+    definition: >-
+      A collection of financial instruments (securities, derivatives, cash) held by an
+      investor or fund, managed within the Aladdin platform.
+  - term: Position
+    definition: >-
+      A holding of a specific security within a portfolio, including quantity, market
+      value, and weight.
+  - term: Benchmark
+    definition: >-
+      A reference index against which portfolio performance and risk are measured,
+      such as the S&P 500 or Bloomberg Aggregate Bond Index.
+  - term: Conway Era
+    definition: >-
+      Informal term not applicable to Aladdin. In Cardano context see blockfrost.
+  - term: Order Management System (OMS)
+    definition: >-
+      Software used to capture, route, and manage investment trade orders from
+      portfolio managers to execution venues.

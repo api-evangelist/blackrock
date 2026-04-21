@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "aladdin": "https://www.blackrock.com/aladdin/ontology/",
+    "portfolioId": "aladdin:portfolioId",
+    "portfolioName": "name",
+    "totalMarketValue": "aladdin:totalMarketValue",
+    "asOfDate": "aladdin:asOfDate",
+    "benchmarkId": "aladdin:benchmarkId",
+    "managerId": "aladdin:managerId",
+    "riskMetrics": "aladdin:riskMetrics",
+    "var95": "aladdin:var95",
+    "var99": "aladdin:var99",
+    "trackingError": "aladdin:trackingError",
+    "factorExposures": "aladdin:factorExposures",
+    "stressTests": "aladdin:stressTests",
+    "currency": "https://schema.org/currency",
+    "positions": "aladdin:positions"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "BlackRock Aladdin Risk Report Structure",
+  "description": "JSON structure for risk analytics output from the Aladdin platform",
+  "fields": [
+    { "name": "reportId", "type": "string", "required": true },
+    { "name": "portfolioId", "type": "string", "required": true },
+    { "name": "asOfDate", "type": "date", "required": true },
+    { "name": "currency", "type": "string", "required": false },
+    { "name": "riskMetrics", "type": "object<RiskMetrics>", "required": false },
+    { "name": "factorExposures", "type": "array<FactorExposure>", "required": false },
+    { "name": "stressTests", "type": "array<StressTest>", "required": false }
+  ]
+}

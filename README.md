@@ -12,7 +12,7 @@ BlackRock is the world's largest asset manager with over $10 trillion in assets 
 ## Timestamps
 
 - **Created:** 2026-03-21
-- **Modified:** 2026-04-19
+- **Modified:** 2026-04-21
 
 ## APIs
 
@@ -29,6 +29,11 @@ The Aladdin Developer program provides APIs that enable clients to access BlackR
 
 - [Documentation](https://www.blackrock.com/aladdin/products/aladdin-developer)
 - [Python SDK (AladdinSDK)](https://github.com/blackrock/aladdinsdk)
+- [JSON Schema - Portfolio](json-schema/blackrock-portfolio-schema.json)
+- [JSON Schema - Risk Report](json-schema/blackrock-risk-report-schema.json)
+- [JSON-LD Context](json-ld/blackrock-context.jsonld)
+- [Example - Portfolio](examples/blackrock-portfolio-example.json)
+- [Example - Risk Report](examples/blackrock-risk-report-example.json)
 
 ## Common Properties
 
@@ -38,6 +43,9 @@ The Aladdin Developer program provides APIs that enable clients to access BlackR
 - [Terms of Service](https://www.blackrock.com/us/individual/regulatory/privacy-policy)
 - [Privacy Policy](https://www.blackrock.com/us/individual/regulatory/privacy-policy)
 - [Blog](https://www.blackrock.com/us/individual/insights)
+- [Spectral Rules](rules/blackrock-spectral-rules.yml)
+- [Naftiko Capability](capabilities/blackrock-aladdin.yaml)
+- [Vocabulary](vocabulary/blackrock-vocabulary.yaml)
 
 ## Features
 
