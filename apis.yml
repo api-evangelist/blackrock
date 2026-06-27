@@ -39,7 +39,7 @@ apis:
     properties:
       - type: Documentation
         url: https://www.blackrock.com/aladdin/products/aladdin-developer
-      - type: SDK
+      - type: SDKs
         url: https://github.com/blackrock/aladdinsdk
         title: Python SDK (AladdinSDK)
       - type: JSONSchema
@@ -52,9 +52,9 @@ apis:
         url: json-structure/blackrock-risk-report-structure.json
       - type: JSONLD
         url: json-ld/blackrock-context.jsonld
-      - type: Example
+      - type: Examples
         url: examples/blackrock-portfolio-example.json
-      - type: Example
+      - type: Examples
         url: examples/blackrock-risk-report-example.json
 common:
   - type: LinkedIn
@@ -73,7 +73,7 @@ common:
     url: https://www.blackrock.com/us/individual/insights
   - type: SpectralRules
     url: rules/blackrock-spectral-rules.yml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/blackrock-aladdin.yaml
   - type: Vocabulary
     url: vocabulary/blackrock-vocabulary.yaml

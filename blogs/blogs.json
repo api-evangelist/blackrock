@@ -3,16 +3,10 @@
   "feeds": [
     {
       "source": "https://www.blackrock.com/us/individual/insights",
-      "feed_url": "https://www.blackrock.com/us/individual/insights",
-      "title": "",
       "saved": 0,
-      "method": "none"
-    },
-    {
-      "source": "https://www.blackrock.com/us/individual/regulatory/privacy-policy",
-      "error": "HTTPError"
+      "error": "HTTP 403 Forbidden"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T12:27:50Z"
 }
