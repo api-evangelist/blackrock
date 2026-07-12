@@ -57,6 +57,8 @@ apis:
       - type: Examples
         url: examples/blackrock-risk-report-example.json
 common:
+  - type: DomainSecurity
+    url: security/blackrock-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/blackrock
   - type: Website
