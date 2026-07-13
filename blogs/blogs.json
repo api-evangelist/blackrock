@@ -2,11 +2,10 @@
   "repo": "blackrock",
   "feeds": [
     {
-      "source": "https://www.blackrock.com/us/individual/insights",
-      "saved": 0,
-      "error": "HTTP 403 Forbidden"
+      "source": "https://www.blackrock.com/us/individual/regulatory/privacy-policy",
+      "error": "HTTPError"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-27T12:27:50Z"
+  "fetched": "2026-07-11T11:50:51Z"
 }
