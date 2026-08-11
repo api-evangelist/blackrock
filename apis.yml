@@ -87,8 +87,6 @@ common:
     url: https://www.blackrock.com/us/individual/insights
   - type: SpectralRules
     url: rules/blackrock-spectral-rules.yml
-  - type: X-NaftikoCapability
-    url: capabilities/blackrock-aladdin.yaml
   - type: Vocabulary
     url: vocabulary/blackrock-vocabulary.yaml
   - type: Features
