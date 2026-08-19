@@ -32,7 +32,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/blackrock.png
 created: '2026-03-21'
 modified: '2026-04-21'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
   - aid: blackrock:aladdin-api
     name: BlackRock Aladdin API
