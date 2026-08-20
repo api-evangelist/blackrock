@@ -11,6 +11,14 @@ description: >-
 tags:
   - Asset Management
   - Finance
+  - Fintech
+  - Investment Management
+  - Portfolio-Management
+  - Risk Analytics
+  - Fortune 500
+tags_raw:
+  - Asset Management
+  - Finance
   - FinTech
   - Investment Management
   - Portfolio Management
@@ -44,6 +52,11 @@ apis:
       and financial services clients.
     humanURL: https://www.blackrock.com/aladdin/products/aladdin-developer
     tags:
+      - Asset Management
+      - Finance
+      - Portfolio-Management
+      - Risk Analytics
+    tags_raw:
       - Asset Management
       - Finance
       - Portfolio Management
