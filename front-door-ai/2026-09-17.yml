@@ -1,0 +1,26 @@
+# Front Door AI Index — blackrock — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: blackrock
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.blackrock.com
+  final_host: www.blackrock.com
+  ownership: own
+  owner: blackrock
+  shares_host_with:
+  - aladdin-studio
+  inherited_from: null
+  verdict: scored
+  score: 3
+  host_score: 3
+  density: 1.26
+  words: 2377
+  tiers:
+    agentic: 0
+    core: 3
+    model: 0
+  ambiguous: 0
+  top_terms:
+    AI: 3

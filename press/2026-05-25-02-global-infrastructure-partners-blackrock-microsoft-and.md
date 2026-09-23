@@ -1,7 +1,9 @@
 ---
 title: Global Infrastructure Partners, BlackRock, Microsoft, and ...
 url: https://www.global-infra.com/news/global-infrastructure-partners-blackrock-microsoft-and-mgx-launch-new-ai-partnership-to-invest-in-data-centers-and-supporting-power-infrastructure/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"BlackRock" press release artificial intelligence'
 position: 2
 source: serpapi-google

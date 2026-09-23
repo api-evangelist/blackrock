@@ -1,7 +1,9 @@
 ---
 title: AI Infrastructure Partnership - BlackRock
 url: https://www.blackrock.com/corporate/newsroom/press-releases/article/corporate-one/press-releases/ai-infrastructure-partnership
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"BlackRock" press release artificial intelligence'
 position: 1
 source: serpapi-google
