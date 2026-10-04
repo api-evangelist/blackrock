@@ -13,7 +13,7 @@ tags:
   - Finance
   - Fintech
   - Investment Management
-  - Portfolio-Management
+  - Portfolio Management
   - Risk Analytics
   - Fortune 500
 tags_raw:
@@ -24,6 +24,7 @@ tags_raw:
   - Portfolio Management
   - Risk Analytics
   - Fortune 500
+  - Portfolio-Management
 type: Index
 deliveryModel:
   model: saas
@@ -65,13 +66,14 @@ apis:
     tags:
       - Asset Management
       - Finance
-      - Portfolio-Management
+      - Portfolio Management
       - Risk Analytics
     tags_raw:
       - Asset Management
       - Finance
       - Portfolio Management
       - Risk Analytics
+      - Portfolio-Management
     properties:
       - type: Documentation
         url: https://www.blackrock.com/aladdin/products/aladdin-developer
