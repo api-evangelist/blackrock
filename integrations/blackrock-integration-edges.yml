@@ -1,0 +1,51 @@
+edges:
+- partner_name: SEC (investment adviser registration)
+  partner: null
+  partner_match: register
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://adviserinfo.sec.gov/firm/summary/105247
+  category: Investment adviser
+  contract_reference:
+    register: SEC Investment Adviser Public Disclosure (IAPD compilation feed, Form ADV Part 1A)
+    spec_file: null
+    standard: Investment Advisers Act of 1940 (SEC Form ADV)
+    role: sec-registered-investment-adviser
+    registered_name: BLACKROCK FUND ADVISORS
+    business_name: null
+    register_id: CRD 105247
+    sec_file_number: 801-22609
+    registration_status: APPROVED
+    registered_since: '1984-11-15'
+    main_office: SAN FRANCISCO, CA, United States
+    matched_domain: blackrock.com
+    matched_by: domain+name-among-holders
+    identity_source: registrant's own Form ADV Item 1.I website address (no lookup)
+    custody_of_client_assets: false
+    signal_note: 'participation only: SEC registration is not a certification; firm type, custody and office are
+      context, never counted; regulatory AUM is not recorded (breadth is not credit)'
+    detected_by: sweep-asset-management.py
+    detected: '2026-10-18'
+    other_registrations:
+    - BLACKROCK ADVISORS, LLC (CRD 106614)
+    - BLACKROCK INTERNATIONAL LIMITED (CRD 106843)
+    - BLACKROCK FINANCIAL MANAGEMENT, INC (CRD 107105)
+    - BLACKROCK CAPITAL MANAGEMENT, INC. (CRD 108069)
+    - BLACKROCK INVESTMENT MANAGEMENT, LLC (CRD 108928)
+    - BLACKROCK REALTY ADVISORS INC (CRD 109457)
+    - BLACKROCK ASSET MANAGEMENT SCHWEIZ AG (CRD 161987)
+    - BLACKROCK (SINGAPORE) LIMITED (CRD 164594)
+    - BLACKROCK ASSET MANAGEMENT NORTH ASIA LIMITED (CRD 165482)
+    - BLACKROCK ALTERNATIVES MANAGEMENT, LLC (CRD 288041)
+  detected_by: sweep-asset-management.py
+  first_seen: '2026-10-18'
+generated: '2026-10-18'
+method: searched
+source:
+- https://reports.adviserinfo.sec.gov/reports/CompilationReports/IA_FIRM_SEC_Feed_10_17_2026.xml.gz
+- https://www.wealthbox.com/wp-json/wp/v2/integrations?per_page=100&page=1
+checked:
+- https://reports.adviserinfo.sec.gov/reports/CompilationReports/IA_FIRM_SEC_Feed_10_17_2026.xml.gz
+- https://www.wealthbox.com/wp-json/wp/v2/integrations?per_page=100&page=1
