@@ -1,0 +1,221 @@
+generated: '2026-10-20'
+method: generated
+source: openapi/blackrock-studio-notification-openapi.yml, openapi/blackrock-studio-subscription-openapi.yml,
+  openapi/blackrock-token-openapi.yml
+description: Recommended x-agentic-access execution contracts, classified heuristically from
+  the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
+  audience per deployment. See research/curity/agentic-governance/.
+summary:
+  operations: 13
+  by_action_class:
+    acting: 8
+    connected: 5
+  by_consequence:
+    write: 8
+    read: 5
+  human_in_the_loop_required: 0
+operations:
+- path: /studioNotifications
+  method: post
+  operationId: StudioNotificationAPI_CreateStudioNotification
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    scope:
+    - platform.studio.studio_notification.v1.StudioNotification
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /studioNotifications/{id}
+  method: get
+  operationId: StudioNotificationAPI_GetStudioNotification
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    scope:
+    - platform.studio.studio_notification.v1.StudioNotification
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /studioNotifications:batchCreate
+  method: post
+  operationId: StudioNotificationAPI_BatchCreateStudioNotifications
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    scope:
+    - platform.studio.studio_notification.v1.StudioNotification
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /studioNotifications:filter
+  method: post
+  operationId: StudioNotificationAPI_FilterStudioNotifications
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    scope:
+    - platform.studio.studio_notification.v1.StudioNotification
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /studioSubscriptions
+  method: post
+  operationId: StudioSubscriptionAPI_CreateStudioSubscription
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    scope:
+    - platform.studio.studio_notification.v1.StudioSubscription
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /studioSubscriptions/{id}
+  method: get
+  operationId: StudioSubscriptionAPI_GetStudioSubscription
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    scope:
+    - platform.studio.studio_notification.v1.StudioSubscription
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /studioSubscriptions/{id}
+  method: delete
+  operationId: StudioSubscriptionAPI_DeleteStudioSubscription
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    scope:
+    - platform.studio.studio_notification.v1.StudioSubscription
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /studioSubscriptions/{studioSubscription.id}
+  method: patch
+  operationId: StudioSubscriptionAPI_UpdateStudioSubscription
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    scope:
+    - platform.studio.studio_notification.v1.StudioSubscription
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /studioSubscriptions:batchCreate
+  method: post
+  operationId: StudioSubscriptionAPI_BatchCreateStudioSubscriptions
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    scope:
+    - platform.studio.studio_notification.v1.StudioSubscription
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /studioSubscriptions:filter
+  method: post
+  operationId: StudioSubscriptionAPI_FilterStudioSubscriptions
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    scope:
+    - platform.studio.studio_notification.v1.StudioSubscription
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /authorizationUrl:generate
+  method: get
+  operationId: TokenAPI_GenerateAuthorizationUrl
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    scope:
+    - platform.infrastructure.token.v1.Token:read
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /token:checkTokenExists
+  method: get
+  operationId: TokenAPI_CheckTokenExists
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    scope:
+    - platform.infrastructure.token.v1.Token:read
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /token:generate
+  method: get
+  operationId: TokenAPI_GenerateToken
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    scope:
+    - platform.infrastructure.token.v1.Token:read
+    token:
+      max-ttl: 3600
+    audit: none

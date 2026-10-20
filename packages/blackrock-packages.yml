@@ -1,0 +1,14 @@
+name: BlackRock packages
+generated: '2026-10-20'
+method: searched
+source: https://pypi.org/pypi/aladdinsdk/json
+packages:
+- name: aladdinsdk
+  registry: pypi
+  url: https://pypi.org/project/aladdinsdk/
+  language: python
+  official: true
+  version: 2.0.0b10
+  published: '2026-07-27'
+  repository: https://github.com/blackrock/aladdinsdk
+  note: First-party AladdinSDK; its repository carries the Swagger contracts saved under openapi/_original/.

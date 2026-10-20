@@ -1,0 +1,40 @@
+generated: '2026-10-20'
+method: derived
+generator: derive-problem-types.py
+source:
+- openapi/blackrock-studio-notification-openapi.yml
+- openapi/blackrock-studio-subscription-openapi.yml
+- openapi/blackrock-token-openapi.yml
+format: custom
+envelope:
+  media_type: null
+  schema: null
+coverage:
+  operations: 13
+  statuses_declared: 4
+problems:
+- status: 400
+  title: Bad Request
+  description: Aladdin® will not process the request due to an apparent client error.
+  operations: 13
+  media_types: []
+  schema: null
+- status: 401
+  title: Unauthorized
+  description: Aladdin® will not process the request as the necessary credentials were not provided or were invalid.
+  operations: 13
+  media_types: []
+  schema: null
+- status: 403
+  title: Forbidden
+  description: Aladdin® understood the request but is refusing to authorize it.
+  operations: 13
+  media_types: []
+  schema: null
+- status: 404
+  title: Not Found
+  description: Aladdin® did not find the resource requested or is unwilling to disclose if it exists. Could indicate
+    a defect in the client program or data
+  operations: 13
+  media_types: []
+  schema: null

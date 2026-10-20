@@ -1,0 +1,81 @@
+generated: '2026-10-20'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/blackrock-studio-notification-openapi.yml
+- openapi/blackrock-studio-subscription-openapi.yml
+- openapi/blackrock-token-openapi.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: No MCP server was found. The pre-flight posted tools/list to /mcp on api.blackrock.com, www.blackrock.com, careers.blackrock.com, ir.blackrock.com;
+  verdict absent. Candidate tools below are derived from the 13 operation(s) in the provider's own OpenAPI (13 listed); they describe what a server
+  WOULD expose, not one that exists.
+tools:
+- name: studio_notification_api_create_studio_notification
+  operationId: StudioNotificationAPI_CreateStudioNotification
+  method: POST
+  path: /studioNotifications
+  description: CreateStudioNotification creates a studio notification
+- name: studio_subscription_api_create_studio_subscription
+  operationId: StudioSubscriptionAPI_CreateStudioSubscription
+  method: POST
+  path: /studioSubscriptions
+  description: CreateStudioSubscription creates a studio subscription
+- name: token_api_generate_authorization_url
+  operationId: TokenAPI_GenerateAuthorizationUrl
+  method: GET
+  path: /authorizationUrl:generate
+  description: GenerateAuthorizationUrl retrieves an Okta authorization URL
+- name: studio_notification_api_get_studio_notification
+  operationId: StudioNotificationAPI_GetStudioNotification
+  method: GET
+  path: /studioNotifications/{id}
+  description: GetStudioNotification gets a studio notification
+- name: studio_subscription_api_get_studio_subscription
+  operationId: StudioSubscriptionAPI_GetStudioSubscription
+  method: GET
+  path: /studioSubscriptions/{id}
+  description: GetStudioSubscription gets a Studio subscription
+- name: token_api_check_token_exists
+  operationId: TokenAPI_CheckTokenExists
+  method: GET
+  path: /token:checkTokenExists
+  description: CheckTokenExists checks whether a token is stored
+- name: studio_notification_api_batch_create_studio_notifications
+  operationId: StudioNotificationAPI_BatchCreateStudioNotifications
+  method: POST
+  path: /studioNotifications:batchCreate
+  description: BatchCreateStudioNotifications creates a batch of studio notifications
+- name: studio_subscription_api_delete_studio_subscription
+  operationId: StudioSubscriptionAPI_DeleteStudioSubscription
+  method: DELETE
+  path: /studioSubscriptions/{id}
+  description: DeleteStudioSubscription deletes a subscription
+- name: token_api_generate_token
+  operationId: TokenAPI_GenerateToken
+  method: GET
+  path: /token:generate
+  description: GenerateToken retrieves a token
+- name: studio_notification_api_filter_studio_notifications
+  operationId: StudioNotificationAPI_FilterStudioNotifications
+  method: POST
+  path: /studioNotifications:filter
+  description: FilterStudioNotifications filters studio notifications by event details
+- name: studio_subscription_api_update_studio_subscription
+  operationId: StudioSubscriptionAPI_UpdateStudioSubscription
+  method: PATCH
+  path: /studioSubscriptions/{studioSubscription.id}
+  description: UpdateStudioSubscription updates a subscription
+- name: studio_subscription_api_batch_create_studio_subscriptions
+  operationId: StudioSubscriptionAPI_BatchCreateStudioSubscriptions
+  method: POST
+  path: /studioSubscriptions:batchCreate
+  description: BatchCreateStudioSubscriptions creates a batch of studio subscriptions
+- name: studio_subscription_api_filter_studio_subscriptions
+  operationId: StudioSubscriptionAPI_FilterStudioSubscriptions
+  method: POST
+  path: /studioSubscriptions:filter
+  description: FilterStudioSubscriptions filters studio subscription by event details

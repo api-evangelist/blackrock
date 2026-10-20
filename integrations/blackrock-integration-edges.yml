@@ -1,3 +1,21 @@
+generated: '2026-10-20'
+method: searched
+source:
+- https://reports.adviserinfo.sec.gov/reports/CompilationReports/IA_FIRM_SEC_Feed_10_17_2026.xml.gz
+- https://www.wealthbox.com/wp-json/wp/v2/integrations?per_page=100&page=1
+- https://zapier.com/apps/blackrock/integrations
+- https://n8n.io/integrations/blackrock/
+- https://composio.dev/toolkits/blackrock
+- https://monid.ai/tools/blackrock
+checked:
+- https://reports.adviserinfo.sec.gov/reports/CompilationReports/IA_FIRM_SEC_Feed_10_17_2026.xml.gz
+- https://www.wealthbox.com/wp-json/wp/v2/integrations?per_page=100&page=1
+- https://composio.dev/toolkits/blackrock
+- https://monid.ai/tools/blackrock
+- https://n8n.io/integrations/blackrock/
+- https://zapier.com/apps/blackrock/integrations
+summary: null
+marketplace_apps: []
 edges:
 - partner_name: SEC (investment adviser registration)
   partner: null
@@ -41,11 +59,4 @@ edges:
     - BLACKROCK ALTERNATIVES MANAGEMENT, LLC (CRD 288041)
   detected_by: sweep-asset-management.py
   first_seen: '2026-10-18'
-generated: '2026-10-18'
-method: searched
-source:
-- https://reports.adviserinfo.sec.gov/reports/CompilationReports/IA_FIRM_SEC_Feed_10_17_2026.xml.gz
-- https://www.wealthbox.com/wp-json/wp/v2/integrations?per_page=100&page=1
-checked:
-- https://reports.adviserinfo.sec.gov/reports/CompilationReports/IA_FIRM_SEC_Feed_10_17_2026.xml.gz
-- https://www.wealthbox.com/wp-json/wp/v2/integrations?per_page=100&page=1
+templates: []

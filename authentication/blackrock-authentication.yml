@@ -1,0 +1,61 @@
+generated: '2026-10-20'
+method: derived
+source: openapi/blackrock-studio-notification-openapi.yml, openapi/blackrock-studio-subscription-openapi.yml,
+  openapi/blackrock-token-openapi.yml
+summary:
+  types:
+  - apiKey
+  - http
+  - oauth2
+  api_key_in:
+  - header
+  oauth2_flows:
+  - authorizationCode
+  - clientCredentials
+schemes:
+- name: APIKeyHeader
+  type: apiKey
+  in: header
+  parameter: VND.com.blackrock.API-Key
+  sources:
+  - openapi/blackrock-studio-notification-openapi.yml
+  - openapi/blackrock-studio-subscription-openapi.yml
+  - openapi/blackrock-token-openapi.yml
+- name: ClientKeyHeader
+  type: apiKey
+  in: header
+  parameter: X-API-Key
+  sources:
+  - openapi/blackrock-studio-notification-openapi.yml
+  - openapi/blackrock-studio-subscription-openapi.yml
+  - openapi/blackrock-token-openapi.yml
+- name: OAuth2AccessCode
+  type: oauth2
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://client.blackrock.com/api/oauth2/default/v1/authorize
+    tokenUrl: https://client.blackrock.com/api/oauth2/default/v1/token
+    scopes: 2
+  description: This API uses OAuth 2.0 with the access code flow.
+  sources:
+  - openapi/blackrock-studio-notification-openapi.yml
+  - openapi/blackrock-studio-subscription-openapi.yml
+  - openapi/blackrock-token-openapi.yml
+- name: OAuth2ClientCredentials
+  type: oauth2
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://client.blackrock.com/api/oauth2/default/v1/token
+    scopes: 2
+  description: This API uses OAuth 2.0 with the client credentials flow.
+  sources:
+  - openapi/blackrock-studio-notification-openapi.yml
+  - openapi/blackrock-studio-subscription-openapi.yml
+  - openapi/blackrock-token-openapi.yml
+- name: basicAuth
+  type: http
+  scheme: basic
+  sources:
+  - openapi/blackrock-studio-notification-openapi.yml
+  - openapi/blackrock-studio-subscription-openapi.yml
+  - openapi/blackrock-token-openapi.yml

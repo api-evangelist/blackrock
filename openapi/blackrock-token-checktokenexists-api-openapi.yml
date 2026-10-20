@@ -1,0 +1,272 @@
+openapi: 3.2.0
+info:
+  title: Blackrock Token:check Token Exists API
+  version: 1.0.0
+  x-aladdin-api-id: agraph.platform.infrastructure.token.TokenAPI
+  x-aladdin-api-stability: beta
+  x-aladdin-spec-id: agraph.platform.infrastructure.token.v1.TokenAPI
+  description: 'Operations tagged Token:checkTokenExists across 2 of this provider''s published API definitions: blackrock-token-swagger.json, blackrock-token-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: /api/platform/infrastructure/token/v1/
+security:
+- APIKeyHeader: []
+  OAuth2AccessCode:
+  - offline_access
+  - platform.infrastructure.token.v1.Token:read
+- APIKeyHeader: []
+  OAuth2ClientCredentials:
+  - offline_access
+  - platform.infrastructure.token.v1.Token:read
+- APIKeyHeader: []
+  ClientKeyHeader: []
+- APIKeyHeader: []
+  basicAuth: []
+tags:
+- name: Token:checkTokenExists
+paths:
+  /token:checkTokenExists:
+    get:
+      security:
+      - APIKeyHeader: []
+        OAuth2AccessCode:
+        - platform.infrastructure.token.v1.Token:read
+      - APIKeyHeader: []
+        OAuth2ClientCredentials:
+        - platform.infrastructure.token.v1.Token:read
+      - APIKeyHeader: []
+        ClientKeyHeader: []
+      - APIKeyHeader: []
+        basicAuth: []
+      description: 'CheckTokenExists returns whether a token is stored by the token
+
+        service for a specific user
+
+        (-- api-linter: aladdin::9002::wordslist-custom-method-rpc=disabled
+
+        aip.dev/not-precedent: We need to do this because check keyword used previous to wordlist --)
+
+        (-- api-linter: aladdin::9002::wordslist-custom-method-http=disabled
+
+        aip.dev/not-precedent: We need to do this because check keyword used previous to wordlist --)'
+      summary: CheckTokenExists checks whether a token is stored
+      operationId: TokenAPI_CheckTokenExists
+      parameters:
+      - description: A unique identifier for this request.
+        name: VND.com.blackrock.Request-ID
+        in: header
+        required: true
+        schema:
+          type: string
+          format: UUID
+      - description: Timestamp assigned to this request at origin, in "HTTP-date" format as defined by RFC 7231.
+        name: VND.com.blackrock.Origin-Timestamp
+        in: header
+        required: true
+        schema:
+          type: string
+          format: date-time
+      - description: application_name is an OAuth2 *application* client.
+        name: applicationName
+        in: query
+        required: true
+        schema:
+          type: string
+      - description: user is the user of the requestor of a token.
+        name: user
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A successful response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/v1CheckTokenExistsResponse'
+        '400':
+          description: Aladdin® will not process the request due to an apparent client error.
+          headers:
+            VND.com.blackrock.Request-ID:
+              description: The unique identifier assigned by the client to the request that originated this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-ID:
+              description: A Unique Identifier for this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-Timestamp:
+              description: Timestamp assigned to this response, in "HTTP-date" format as defined by RFC 7231.
+              schema:
+                type: string
+                format: date-time
+          content:
+            application/json:
+              schema:
+                description: Defines an error that occurred.
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    description: A short mnemonic reference code for the error.
+                    type: string
+                    maxLength: 40
+                  message:
+                    description: A human readable description of the error.
+                    type: string
+        '401':
+          description: Aladdin® will not process the request as the necessary credentials were not provided or were invalid.
+          headers:
+            VND.com.blackrock.Request-ID:
+              description: The unique identifier assigned by the client to the request that originated this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-ID:
+              description: A Unique Identifier for this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-Timestamp:
+              description: Timestamp assigned to this response, in "HTTP-date" format as defined by RFC 7231.
+              schema:
+                type: string
+                format: date-time
+          content:
+            application/json:
+              schema:
+                description: Defines an error that occurred.
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    description: A short mnemonic reference code for the error.
+                    type: string
+                    maxLength: 40
+                  message:
+                    description: A human readable description of the error.
+                    type: string
+        '403':
+          description: Aladdin® understood the request but is refusing to authorize it.
+          headers:
+            VND.com.blackrock.Request-ID:
+              description: The unique identifier assigned by the client to the request that originated this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-ID:
+              description: A Unique Identifier for this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-Timestamp:
+              description: Timestamp assigned to this response, in "HTTP-date" format as defined by RFC 7231.
+              schema:
+                type: string
+                format: date-time
+          content:
+            application/json:
+              schema:
+                description: Defines an error that occurred.
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    description: A short mnemonic reference code for the error.
+                    type: string
+                    maxLength: 40
+                  message:
+                    description: A human readable description of the error.
+                    type: string
+        '404':
+          description: Aladdin® did not find the resource requested or is unwilling to disclose if it exists. Could indicate a defect in the client program or data which is no longer accessible.
+          headers:
+            VND.com.blackrock.Request-ID:
+              description: The unique identifier assigned by the client to the request that originated this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-ID:
+              description: A Unique Identifier for this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-Timestamp:
+              description: Timestamp assigned to this response, in "HTTP-date" format as defined by RFC 7231.
+              schema:
+                type: string
+                format: date-time
+          content:
+            application/json:
+              schema:
+                description: Defines an error that occurred.
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    description: A short mnemonic reference code for the error.
+                    type: string
+                    maxLength: 40
+                  message:
+                    description: A human readable description of the error.
+                    type: string
+      x-access-type: READ
+      x-quota-limit: 5000
+      tags:
+      - Token:checkTokenExists
+    servers:
+    - url: /api/platform/infrastructure/token/v1/
+components:
+  schemas:
+    v1CheckTokenExistsResponse:
+      type: object
+      title: The response message from TokenApi.CheckTokenExists
+      properties:
+        tokenPresent:
+          type: boolean
+          title: token_present is a bool on the Exists of a token in the token service
+  securitySchemes:
+    APIKeyHeader:
+      type: apiKey
+      name: VND.com.blackrock.API-Key
+      in: header
+    ClientKeyHeader:
+      type: apiKey
+      name: X-API-Key
+      in: header
+    OAuth2AccessCode:
+      type: oauth2
+      flows:
+        authorizationCode:
+          scopes:
+            offline_access: This keeps you signed in to the app, even when you are not using it.
+            platform.infrastructure.token.v1.Token:read: non-sensitive read
+          authorizationUrl: https://client.blackrock.com/api/oauth2/default/v1/authorize
+          tokenUrl: https://client.blackrock.com/api/oauth2/default/v1/token
+      description: This API uses OAuth 2.0 with the access code flow.
+    OAuth2ClientCredentials:
+      type: oauth2
+      flows:
+        clientCredentials:
+          scopes:
+            offline_access: This keeps you signed in to the app, even when you are not using it.
+            platform.infrastructure.token.v1.Token:read: non-sensitive read
+          tokenUrl: https://client.blackrock.com/api/oauth2/default/v1/token
+      description: This API uses OAuth 2.0 with the client credentials flow.
+    basicAuth:
+      type: http
+      scheme: basic
+x-refined-from:
+- blackrock-token-swagger.json
+- blackrock-token-openapi.yml
+x-access-level: Internal

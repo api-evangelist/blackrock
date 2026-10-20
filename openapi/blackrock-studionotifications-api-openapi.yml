@@ -1,0 +1,535 @@
+openapi: 3.2.0
+info:
+  title: Blackrock Studio Notifications API
+  version: 1.0.0
+  x-aladdin-api-id: agraph.platform.studio.studio_notification.StudioNotificationAPI
+  x-aladdin-api-stability: alpha
+  x-aladdin-spec-id: agraph.platform.studio.studio_notification.v1.StudioNotificationAPI
+  description: 'Operations tagged StudioNotifications across 2 of this provider''s published API definitions: blackrock-studio_notification-swagger.json, blackrock-studio-notification-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: /api/platform/studio/studio-notification/v1/
+security:
+- APIKeyHeader: []
+  OAuth2AccessCode:
+  - offline_access
+  - platform.studio.studio_notification.v1.StudioNotification
+- APIKeyHeader: []
+  OAuth2ClientCredentials:
+  - offline_access
+  - platform.studio.studio_notification.v1.StudioNotification
+- APIKeyHeader: []
+  ClientKeyHeader: []
+- APIKeyHeader: []
+  basicAuth: []
+tags:
+- name: StudioNotifications
+paths:
+  /studioNotifications:
+    post:
+      security:
+      - APIKeyHeader: []
+        OAuth2AccessCode:
+        - platform.studio.studio_notification.v1.StudioNotification
+      - APIKeyHeader: []
+        OAuth2ClientCredentials:
+        - platform.studio.studio_notification.v1.StudioNotification
+      - APIKeyHeader: []
+        ClientKeyHeader: []
+      - APIKeyHeader: []
+        basicAuth: []
+      description: Creates a Studio notification to be sent to subscribers
+      summary: CreateStudioNotification creates a studio notification
+      operationId: StudioNotificationAPI_CreateStudioNotification
+      parameters:
+      - description: A unique identifier for this request.
+        name: VND.com.blackrock.Request-ID
+        in: header
+        required: true
+        schema:
+          type: string
+          format: UUID
+      - description: Timestamp assigned to this request at origin, in "HTTP-date" format as defined by RFC 7231.
+        name: VND.com.blackrock.Origin-Timestamp
+        in: header
+        required: true
+        schema:
+          type: string
+          format: date-time
+      responses:
+        '200':
+          description: A successful response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/v1StudioNotification'
+        '400':
+          description: Aladdin® will not process the request due to an apparent client error.
+          headers:
+            VND.com.blackrock.Request-ID:
+              description: The unique identifier assigned by the client to the request that originated this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-ID:
+              description: A Unique Identifier for this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-Timestamp:
+              description: Timestamp assigned to this response, in "HTTP-date" format as defined by RFC 7231.
+              schema:
+                type: string
+                format: date-time
+          content:
+            application/json:
+              schema:
+                description: Defines an error that occurred.
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    description: A short mnemonic reference code for the error.
+                    type: string
+                    maxLength: 40
+                  message:
+                    description: A human readable description of the error.
+                    type: string
+        '401':
+          description: Aladdin® will not process the request as the necessary credentials were not provided or were invalid.
+          headers:
+            VND.com.blackrock.Request-ID:
+              description: The unique identifier assigned by the client to the request that originated this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-ID:
+              description: A Unique Identifier for this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-Timestamp:
+              description: Timestamp assigned to this response, in "HTTP-date" format as defined by RFC 7231.
+              schema:
+                type: string
+                format: date-time
+          content:
+            application/json:
+              schema:
+                description: Defines an error that occurred.
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    description: A short mnemonic reference code for the error.
+                    type: string
+                    maxLength: 40
+                  message:
+                    description: A human readable description of the error.
+                    type: string
+        '403':
+          description: Aladdin® understood the request but is refusing to authorize it.
+          headers:
+            VND.com.blackrock.Request-ID:
+              description: The unique identifier assigned by the client to the request that originated this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-ID:
+              description: A Unique Identifier for this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-Timestamp:
+              description: Timestamp assigned to this response, in "HTTP-date" format as defined by RFC 7231.
+              schema:
+                type: string
+                format: date-time
+          content:
+            application/json:
+              schema:
+                description: Defines an error that occurred.
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    description: A short mnemonic reference code for the error.
+                    type: string
+                    maxLength: 40
+                  message:
+                    description: A human readable description of the error.
+                    type: string
+        '404':
+          description: Aladdin® did not find the resource requested or is unwilling to disclose if it exists. Could indicate a defect in the client program or data which is no longer accessible.
+          headers:
+            VND.com.blackrock.Request-ID:
+              description: The unique identifier assigned by the client to the request that originated this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-ID:
+              description: A Unique Identifier for this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-Timestamp:
+              description: Timestamp assigned to this response, in "HTTP-date" format as defined by RFC 7231.
+              schema:
+                type: string
+                format: date-time
+          content:
+            application/json:
+              schema:
+                description: Defines an error that occurred.
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    description: A short mnemonic reference code for the error.
+                    type: string
+                    maxLength: 40
+                  message:
+                    description: A human readable description of the error.
+                    type: string
+      x-quota-limit: 1000
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/v1StudioNotification'
+        description: Studio notification to create.
+        required: true
+      tags:
+      - StudioNotifications
+    servers:
+    - url: /api/platform/studio/studio-notification/v1/
+  /studioNotifications/{id}:
+    get:
+      security:
+      - APIKeyHeader: []
+        OAuth2AccessCode:
+        - platform.studio.studio_notification.v1.StudioNotification
+      - APIKeyHeader: []
+        OAuth2ClientCredentials:
+        - platform.studio.studio_notification.v1.StudioNotification
+      - APIKeyHeader: []
+        ClientKeyHeader: []
+      - APIKeyHeader: []
+        basicAuth: []
+      description: Retrieve a Studio notification by id
+      summary: GetStudioNotification gets a studio notification
+      operationId: StudioNotificationAPI_GetStudioNotification
+      parameters:
+      - description: A unique identifier for this request.
+        name: VND.com.blackrock.Request-ID
+        in: header
+        required: true
+        schema:
+          type: string
+          format: UUID
+      - description: Timestamp assigned to this request at origin, in "HTTP-date" format as defined by RFC 7231.
+        name: VND.com.blackrock.Origin-Timestamp
+        in: header
+        required: true
+        schema:
+          type: string
+          format: date-time
+      - description: Name of the studio notification
+        name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A successful response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/v1StudioNotification'
+        '400':
+          description: Aladdin® will not process the request due to an apparent client error.
+          headers:
+            VND.com.blackrock.Request-ID:
+              description: The unique identifier assigned by the client to the request that originated this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-ID:
+              description: A Unique Identifier for this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-Timestamp:
+              description: Timestamp assigned to this response, in "HTTP-date" format as defined by RFC 7231.
+              schema:
+                type: string
+                format: date-time
+          content:
+            application/json:
+              schema:
+                description: Defines an error that occurred.
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    description: A short mnemonic reference code for the error.
+                    type: string
+                    maxLength: 40
+                  message:
+                    description: A human readable description of the error.
+                    type: string
+        '401':
+          description: Aladdin® will not process the request as the necessary credentials were not provided or were invalid.
+          headers:
+            VND.com.blackrock.Request-ID:
+              description: The unique identifier assigned by the client to the request that originated this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-ID:
+              description: A Unique Identifier for this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-Timestamp:
+              description: Timestamp assigned to this response, in "HTTP-date" format as defined by RFC 7231.
+              schema:
+                type: string
+                format: date-time
+          content:
+            application/json:
+              schema:
+                description: Defines an error that occurred.
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    description: A short mnemonic reference code for the error.
+                    type: string
+                    maxLength: 40
+                  message:
+                    description: A human readable description of the error.
+                    type: string
+        '403':
+          description: Aladdin® understood the request but is refusing to authorize it.
+          headers:
+            VND.com.blackrock.Request-ID:
+              description: The unique identifier assigned by the client to the request that originated this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-ID:
+              description: A Unique Identifier for this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-Timestamp:
+              description: Timestamp assigned to this response, in "HTTP-date" format as defined by RFC 7231.
+              schema:
+                type: string
+                format: date-time
+          content:
+            application/json:
+              schema:
+                description: Defines an error that occurred.
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    description: A short mnemonic reference code for the error.
+                    type: string
+                    maxLength: 40
+                  message:
+                    description: A human readable description of the error.
+                    type: string
+        '404':
+          description: Aladdin® did not find the resource requested or is unwilling to disclose if it exists. Could indicate a defect in the client program or data which is no longer accessible.
+          headers:
+            VND.com.blackrock.Request-ID:
+              description: The unique identifier assigned by the client to the request that originated this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-ID:
+              description: A Unique Identifier for this response.
+              schema:
+                type: string
+                format: UUID
+            VND.com.blackrock.Response-Timestamp:
+              description: Timestamp assigned to this response, in "HTTP-date" format as defined by RFC 7231.
+              schema:
+                type: string
+                format: date-time
+          content:
+            application/json:
+              schema:
+                description: Defines an error that occurred.
+                type: object
+                required:
+                - code
+                - message
+                properties:
+                  code:
+                    description: A short mnemonic reference code for the error.
+                    type: string
+                    maxLength: 40
+                  message:
+                    description: A human readable description of the error.
+                    type: string
+      x-quota-limit: 1000
+      tags:
+      - StudioNotifications
+    servers:
+    - url: /api/platform/studio/studio-notification/v1/
+components:
+  schemas:
+    v1StudioRecipientScope:
+      type: object
+      title: studioRecipientScope describes the notification recipient
+      properties:
+        studioRecipientId:
+          type: string
+          title: "studio_recipient_id is the id of the targeted notification receiver.\n(-- api-linter: core::0124::required-reference=disabled\n    aip.dev/not-precedent: We need to do this because it is an opaque identifier. --)"
+        studioRecipientType:
+          title: studio_recipient_type is the type of the notification receiver
+          $ref: '#/components/schemas/v1StudioRecipientType'
+        studioRecipientAccessType:
+          type: string
+          title: studio_recipient_access_type is the access type of the notification receiver. Usually refers to group level notifications(member,owner,or a decode for perm level)
+    v1StudioNotification:
+      type: object
+      title: StudioNotification describes a notification from Studio services
+      properties:
+        id:
+          type: string
+          title: id is the unique identifier for a notification
+        studioNotificationEvent:
+          title: studio_notification_event is the type of event that triggered the notification
+          $ref: '#/components/schemas/v1StudioNotificationEvent'
+        studioNotificationScope:
+          title: studio_notification_scope is the scope of who this notification will be sent to matched by the subscription
+          $ref: '#/components/schemas/v1StudioNotificationScope'
+        sender:
+          type: string
+          title: sender is the source of the notification
+        notificationSubject:
+          type: string
+          title: notification_subject is the title of the notification
+        notificationMessage:
+          type: string
+          title: notification_message contains the body of the notification
+        creationDateTime:
+          type: string
+          format: date-time
+          title: creation_date_time is the time the notification was created
+        notificationMetadata:
+          type: object
+          title: notification_metadata is a free-form payload that can contain any information about the specific notification to be displayed
+        studioRecipientScopes:
+          type: array
+          title: array of all recipients of all types
+          items:
+            $ref: '#/components/schemas/v1StudioRecipientScope'
+    v1StudioRecipientType:
+      description: "- STUDIO_RECIPIENT_TYPE_UNSPECIFIED: Unspecified\n - STUDIO_RECIPIENT_TYPE_USER: User\n - STUDIO_RECIPIENT_TYPE_EMAIL: Email\n - STUDIO_RECIPIENT_TYPE_PROJECT: Project\n - STUDIO_RECIPIENT_TYPE_SPACE: Space\n - STUDIO_RECIPIENT_TYPE_PERM: PERMS"
+      type: string
+      title: StudioRecipientType is the type of the notification receiver
+      default: STUDIO_RECIPIENT_TYPE_UNSPECIFIED
+      enum:
+      - STUDIO_RECIPIENT_TYPE_UNSPECIFIED
+      - STUDIO_RECIPIENT_TYPE_USER
+      - STUDIO_RECIPIENT_TYPE_EMAIL
+      - STUDIO_RECIPIENT_TYPE_PROJECT
+      - STUDIO_RECIPIENT_TYPE_SPACE
+      - STUDIO_RECIPIENT_TYPE_PERM
+    v1StudioEntityType:
+      description: "- STUDIO_ENTITY_TYPE_UNSPECIFIED: Unspecified\n - STUDIO_ENTITY_TYPE_USER: User\n - STUDIO_ENTITY_TYPE_PROJECT: Project\n - STUDIO_ENTITY_TYPE_SPACE: Space"
+      type: string
+      title: StudioEntityType is the entity type of the notification receiver
+      default: STUDIO_ENTITY_TYPE_UNSPECIFIED
+      enum:
+      - STUDIO_ENTITY_TYPE_UNSPECIFIED
+      - STUDIO_ENTITY_TYPE_USER
+      - STUDIO_ENTITY_TYPE_PROJECT
+      - STUDIO_ENTITY_TYPE_SPACE
+    v1StudioNotificationEvent:
+      type: object
+      title: StudioNotificationEvent contains the information about the event that triggers a Studio notification
+      properties:
+        studioNotificationEventType:
+          title: studio_notification_event_type is the type of event that triggered the notification e.g. NOTIFICATION_TYPE_PROJECT
+          $ref: '#/components/schemas/v1StudioNotificationEventType'
+        eventName:
+          type: string
+          title: name is the name of the event specific to the type of notification e.g. project_user_added
+    v1StudioNotificationEventType:
+      description: "- STUDIO_NOTIFICATION_EVENT_TYPE_UNSPECIFIED: Unspecified\n - STUDIO_NOTIFICATION_EVENT_TYPE_ACM: Aladdin Credit Management\n - STUDIO_NOTIFICATION_EVENT_TYPE_COMPUTE: Studio Compute\n - STUDIO_NOTIFICATION_EVENT_TYPE_API: API Applications\n - STUDIO_NOTIFICATION_EVENT_TYPE_SPACE: Studio Space\n - STUDIO_NOTIFICATION_EVENT_TYPE_PROJECT: Studio Project"
+      type: string
+      title: StudioNotificationEventType is the type of Studio notification
+      default: STUDIO_NOTIFICATION_EVENT_TYPE_UNSPECIFIED
+      enum:
+      - STUDIO_NOTIFICATION_EVENT_TYPE_UNSPECIFIED
+      - STUDIO_NOTIFICATION_EVENT_TYPE_ACM
+      - STUDIO_NOTIFICATION_EVENT_TYPE_COMPUTE
+      - STUDIO_NOTIFICATION_EVENT_TYPE_API
+      - STUDIO_NOTIFICATION_EVENT_TYPE_SPACE
+      - STUDIO_NOTIFICATION_EVENT_TYPE_PROJECT
+    v1StudioNotificationScope:
+      type: object
+      title: StudioNotificationScope describes the notification receiver
+      properties:
+        studioEntityType:
+          title: studio_entity_type is the entity type of the notification receiver
+          $ref: '#/components/schemas/v1StudioEntityType'
+        studioEntityName:
+          type: string
+          title: studio_entity_name is the name of the targeted notification receiver
+  securitySchemes:
+    APIKeyHeader:
+      type: apiKey
+      name: VND.com.blackrock.API-Key
+      in: header
+    ClientKeyHeader:
+      type: apiKey
+      name: X-API-Key
+      in: header
+    OAuth2AccessCode:
+      type: oauth2
+      flows:
+        authorizationCode:
+          scopes:
+            offline_access: This keeps you signed in to the app, even when you are not using it.
+            platform.studio.studio_notification.v1.StudioNotification: This grants access to all endpoints in the platform.studio.studio_notification.v1.StudioNotification API
+          authorizationUrl: https://client.blackrock.com/api/oauth2/default/v1/authorize
+          tokenUrl: https://client.blackrock.com/api/oauth2/default/v1/token
+      description: This API uses OAuth 2.0 with the access code flow.
+    OAuth2ClientCredentials:
+      type: oauth2
+      flows:
+        clientCredentials:
+          scopes:
+            offline_access: This keeps you signed in to the app, even when you are not using it.
+            platform.studio.studio_notification.v1.StudioNotification: This grants access to all endpoints in the platform.studio.studio_notification.v1.StudioNotification API
+          tokenUrl: https://client.blackrock.com/api/oauth2/default/v1/token
+      description: This API uses OAuth 2.0 with the client credentials flow.
+    basicAuth:
+      type: http
+      scheme: basic
+x-refined-from:
+- blackrock-studio_notification-swagger.json
+- blackrock-studio-notification-openapi.yml
+x-access-level: Internal

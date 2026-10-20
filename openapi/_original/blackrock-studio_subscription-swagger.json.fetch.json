@@ -1,0 +1,11 @@
+{
+ "url": "https://raw.githubusercontent.com/blackrock/aladdinsdk/HEAD/aladdinsdk/api/codegen/platform/studio/studio_notification/v1/studio_subscription/swagger.json",
+ "final": "https://raw.githubusercontent.com/blackrock/aladdinsdk/HEAD/aladdinsdk/api/codegen/platform/studio/studio_notification/v1/studio_subscription/swagger.json",
+ "status": 200,
+ "bytes": 84183,
+ "sha256": "f4bac79cc339abf9da491c57ecf765f7be2163d9abadb455f94438dcbd92c0c2",
+ "fetched_at": "2026-10-20",
+ "fetched_by": "APIEvangelist-Harvest/1.0",
+ "match": "byte-identical",
+ "note": "BlackRock's own aladdinsdk repository on GitHub (roadmap#979)"
+}

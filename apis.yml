@@ -1,30 +1,28 @@
 aid: blackrock
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/blackrock/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/blackrock/refs/heads/main/apis.yml
 name: BlackRock
-description: >-
-  BlackRock is the world's largest asset manager with over $10 trillion in assets under
-  management. Through its Aladdin platform, BlackRock provides institutional investors,
-  wealth managers, and financial services firms with risk analytics, portfolio management,
-  and data capabilities via APIs. The Aladdin platform powers investment operations for
-  many of the world's largest pension funds, insurers, and asset managers.
+description: BlackRock is the world's largest asset manager with over $10 trillion in assets under management.
+  Through its Aladdin platform, BlackRock provides institutional investors, wealth managers, and financial
+  services firms with risk analytics, portfolio management, and data capabilities via APIs. The Aladdin
+  platform powers investment operations for many of the world's largest pension funds, insurers, and asset
+  managers.
 tags:
-  - Asset Management
-  - Finance
-  - Fintech
-  - Investment Management
-  - Portfolio Management
-  - Risk Analytics
-  - Fortune 500
+- Asset Management
+- Finance
+- Fintech
+- Investment Management
+- Portfolio Management
+- Risk Analytics
+- Fortune 500
 tags_raw:
-  - Asset Management
-  - Finance
-  - FinTech
-  - Investment Management
-  - Portfolio Management
-  - Risk Analytics
-  - Fortune 500
-  - Portfolio-Management
+- Asset Management
+- Finance
+- FinTech
+- Investment Management
+- Portfolio Management
+- Risk Analytics
+- Fortune 500
+- Portfolio-Management
 type: Index
 deliveryModel:
   model: saas
@@ -51,143 +49,275 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/blackrock.png
 created: '2026-03-21'
-modified: '2026-04-21'
+modified: '2026-10-20'
 specificationVersion: '0.23'
-apis:
-  - aid: blackrock:aladdin-api
-    name: BlackRock Aladdin API
-    description: >-
-      The Aladdin Developer program provides APIs that enable clients to access
-      BlackRock's Aladdin platform capabilities programmatically. Aladdin APIs
-      support portfolio analytics, risk reporting, data access, order management,
-      and workflow automation for institutional asset managers, wealth managers,
-      and financial services clients.
-    humanURL: https://www.blackrock.com/aladdin/products/aladdin-developer
-    tags:
-      - Asset Management
-      - Finance
-      - Portfolio Management
-      - Risk Analytics
-    tags_raw:
-      - Asset Management
-      - Finance
-      - Portfolio Management
-      - Risk Analytics
-      - Portfolio-Management
-    properties:
-      - type: Documentation
-        url: https://www.blackrock.com/aladdin/products/aladdin-developer
-      - type: SDKs
-        url: https://github.com/blackrock/aladdinsdk
-        title: Python SDK (AladdinSDK)
-      - type: JSONSchema
-        url: json-schema/blackrock-portfolio-schema.json
-      - type: JSONSchema
-        url: json-schema/blackrock-risk-report-schema.json
-      - type: JSONStructure
-        url: json-structure/blackrock-portfolio-structure.json
-      - type: JSONStructure
-        url: json-structure/blackrock-risk-report-structure.json
-      - type: JSONLD
-        url: json-ld/blackrock-context.jsonld
-      - type: Examples
-        url: examples/blackrock-portfolio-example.json
-      - type: Examples
-        url: examples/blackrock-risk-report-example.json
-common:
-  - type: Plans
-    url: plans/blackrock-plans-pricing.yml
-  - type: RateLimits
-    url: rate-limits/blackrock-rate-limits.yml
-  - type: FinOps
-    url: finops/blackrock-finops.yml
-  - type: DomainSecurity
-    url: security/blackrock-domain-security.yml
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/blackrock
-  - type: Website
-    url: https://www.blackrock.com
-  - type: Documentation
-    url: https://www.blackrock.com/aladdin/products/aladdin-developer
-  - type: GitHubOrganization
-    url: https://github.com/blackrock
-  - type: TermsOfService
-    url: https://www.blackrock.com/us/individual/regulatory/privacy-policy
-  - type: PrivacyPolicy
-    url: https://www.blackrock.com/us/individual/regulatory/privacy-policy
-  - type: Blog
-    url: https://www.blackrock.com/us/individual/insights
-  - type: SpectralRules
-    url: rules/blackrock-spectral-rules.yml
-  - type: Vocabulary
-    url: vocabulary/blackrock-vocabulary.yaml
-  - type: Features
-    data:
-      - name: Aladdin Risk Analytics
-        description: >-
-          Multi-asset risk measurement and attribution capabilities accessible
-          via API, including VaR, factor exposures, stress testing, and scenario
-          analysis.
-      - name: Portfolio Management APIs
-        description: >-
-          APIs for portfolio construction, optimization, rebalancing, and
-          compliance monitoring integrated with the Aladdin operating system.
-      - name: Data Access Layer
-        description: >-
-          Structured access to market data, security reference data, and
-          portfolio data via RESTful APIs with enterprise data governance.
-      - name: Order Management System Integration
-        description: >-
-          APIs for trade order management, execution, and settlement workflows
-          integrating with OMS and EMS systems.
-      - name: AladdinSDK
-        description: >-
-          Open-source Python SDK providing programmatic access to Aladdin APIs
-          with authentication, pagination, and data transformation utilities.
-      - name: Workflow Automation
-        description: >-
-          Event-driven workflow APIs enabling clients to automate investment
-          operations processes and integrate with third-party systems.
-  - type: UseCases
-    data:
-      - name: Institutional Risk Reporting
-        description: >-
-          Institutional investors use Aladdin APIs to generate regulatory risk
-          reports, UCITS compliance reports, and investor disclosures.
-      - name: Portfolio Analytics Integration
-        description: >-
-          Wealth managers and RIAs integrate Aladdin risk analytics into their
-          own client-facing and advisor-facing platforms.
-      - name: Fintech Data Integration
-        description: >-
-          FinTech companies access structured investment data through Aladdin
-          APIs to power analytics, research, and advisory products.
-      - name: Automated Rebalancing
-        description: >-
-          Portfolio managers automate rebalancing workflows using Aladdin APIs
-          to trigger trades based on drift thresholds and target allocations.
-      - name: Multi-Manager Aggregation
-        description: >-
-          Family offices and fund-of-funds use Aladdin APIs to aggregate
-          portfolio data across multiple managers into a single risk view.
-  - type: Integrations
-    data:
-      - name: Charles River Development
-        description: >-
-          Aladdin integrates with Charles River IMS for order management and
-          compliance workflow automation.
-      - name: SimCorp Dimension
-        description: >-
-          Integration between Aladdin risk analytics and SimCorp's portfolio
-          management and accounting systems.
-      - name: Bloomberg
-        description: >-
-          Market data and analytics integrations with Bloomberg Data License
-          and Bloomberg PORT for risk and performance.
-      - name: Refinitiv
-        description: >-
-          Security master data and market data integrations with Refinitiv
-          Datascope and Eikon platforms.
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
+common:
+- type: AgenticAccess
+  url: agentic-access/blackrock-agentic-access.yml
+- type: Spectral
+  url: rules/blackrock-spectral-rules.yml
+- type: Spectral
+  url: rules/blackrock-rules.yml
+- type: Spectral
+  url: rules/blackrock-jsonschema-spectral-rules.yml
+- type: DataModel
+  url: data-model/blackrock-data-model.yml
+- type: ErrorCatalog
+  url: errors/blackrock-problem-types.yml
+- type: Conformance
+  url: conformance/blackrock-conformance.yml
+- type: Hosts
+  url: hosts/blackrock-hosts.yml
+- type: IntegrationEdges
+  url: integrations/blackrock-integration-edges.yml
+- type: Vendors
+  url: vendors/blackrock-vendors.yml
+- type: Packages
+  url: packages/blackrock-packages.yml
+- type: OAuthScopes
+  url: scopes/blackrock-scopes.yml
+- type: Authentication
+  url: authentication/blackrock-authentication.yml
+- type: Plans
+  url: plans/blackrock-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/blackrock-rate-limits.yml
+- type: FinOps
+  url: finops/blackrock-finops.yml
+- type: DomainSecurity
+  url: security/blackrock-domain-security.yml
+- type: LinkedIn
+  url: https://www.linkedin.com/company/blackrock
+- type: Website
+  url: https://www.blackrock.com
+- type: GitHubOrganization
+  url: https://github.com/blackrock
+- type: Blog
+  url: https://www.blackrock.com/us/individual/insights
+- type: SpectralRules
+  url: rules/blackrock-spectral-rules.yml
+- type: Vocabulary
+  url: vocabulary/blackrock-vocabulary.yaml
+- type: Features
+  data:
+  - name: Aladdin Risk Analytics
+    description: Multi-asset risk measurement and attribution capabilities accessible via API, including
+      VaR, factor exposures, stress testing, and scenario analysis.
+  - name: Portfolio Management APIs
+    description: APIs for portfolio construction, optimization, rebalancing, and compliance monitoring
+      integrated with the Aladdin operating system.
+  - name: Data Access Layer
+    description: Structured access to market data, security reference data, and portfolio data via RESTful
+      APIs with enterprise data governance.
+  - name: Order Management System Integration
+    description: APIs for trade order management, execution, and settlement workflows integrating with
+      OMS and EMS systems.
+  - name: AladdinSDK
+    description: Open-source Python SDK providing programmatic access to Aladdin APIs with authentication,
+      pagination, and data transformation utilities.
+  - name: Workflow Automation
+    description: Event-driven workflow APIs enabling clients to automate investment operations processes
+      and integrate with third-party systems.
+- type: UseCases
+  data:
+  - name: Institutional Risk Reporting
+    description: Institutional investors use Aladdin APIs to generate regulatory risk reports, UCITS compliance
+      reports, and investor disclosures.
+  - name: Portfolio Analytics Integration
+    description: Wealth managers and RIAs integrate Aladdin risk analytics into their own client-facing
+      and advisor-facing platforms.
+  - name: Fintech Data Integration
+    description: FinTech companies access structured investment data through Aladdin APIs to power analytics,
+      research, and advisory products.
+  - name: Automated Rebalancing
+    description: Portfolio managers automate rebalancing workflows using Aladdin APIs to trigger trades
+      based on drift thresholds and target allocations.
+  - name: Multi-Manager Aggregation
+    description: Family offices and fund-of-funds use Aladdin APIs to aggregate portfolio data across
+      multiple managers into a single risk view.
+- type: Integrations
+  data:
+  - name: Charles River Development
+    description: Aladdin integrates with Charles River IMS for order management and compliance workflow
+      automation.
+  - name: SimCorp Dimension
+    description: Integration between Aladdin risk analytics and SimCorp's portfolio management and accounting
+      systems.
+  - name: Bloomberg
+    description: Market data and analytics integrations with Bloomberg Data License and Bloomberg PORT
+      for risk and performance.
+  - name: Refinitiv
+    description: Security master data and market data integrations with Refinitiv Datascope and Eikon
+      platforms.
+- type: TermsOfService
+  url: https://www.blackrock.com/corporate/compliance/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://www.blackrock.com/corporate/compliance/privacy-notice
+- type: Login
+  url: https://www.blackrock.com/us/individual/sign-on.oauth?redirectUrl=%2Fus%2Findividual%3FsignInAppWithOkta%3Dtrue
+- type: Newsroom
+  url: https://www.blackrock.com/corporate/newsroom
+- type: Documentation
+  url: https://www.blackrock.com/aladdin/products/aladdin-studio
+apis:
+- aid: blackrock:aladdin-api
+  name: BlackRock Aladdin API
+  description: >-
+    The Aladdin Developer program provides APIs that enable clients to access BlackRock's Aladdin platform
+    capabilities programmatically. Aladdin APIs support portfolio analytics, risk reporting, data access,
+    order management, and workflow automation for institutional asset managers, wealth managers, and financial
+    services clients.
+  humanURL: https://www.blackrock.com/aladdin/products/aladdin-studio
+  tags:
+  - Asset Management
+  - Finance
+  - Portfolio Management
+  - Risk Analytics
+  tags_raw:
+  - Asset Management
+  - Finance
+  - Portfolio Management
+  - Risk Analytics
+  - Portfolio-Management
+  properties:
+  - type: Documentation
+    url: https://www.blackrock.com/aladdin/products/aladdin-studio
+  - type: SDKs
+    url: https://github.com/blackrock/aladdinsdk
+    title: Python SDK (AladdinSDK)
+  - type: JSONSchema
+    url: json-schema/blackrock-portfolio-schema.json
+  - type: JSONSchema
+    url: json-schema/blackrock-risk-report-schema.json
+  - type: JSONStructure
+    url: json-structure/blackrock-portfolio-structure.json
+  - type: JSONStructure
+    url: json-structure/blackrock-risk-report-structure.json
+  - type: JSONLD
+    url: json-ld/blackrock-context.jsonld
+  - type: Examples
+    url: examples/blackrock-portfolio-example.json
+  - type: Examples
+    url: examples/blackrock-risk-report-example.json
+- aid: blackrock:blackrock-authorizationurl-generate-api
+  name: BlackRock Authorization Url:generate API
+  description: >-
+    The AuthorizationUrl:generate API from BlackRock — 1 operation(s) for authorizationurl:generate.
+  humanURL: https://www.blackrock.com/aladdin/products/aladdin-studio
+  baseURL: https://{defaultWebServer}/api/platform/infrastructure/token/v1
+  tags:
+  - AuthorizationUrl:generate
+  properties:
+  - type: OpenAPI
+    url: openapi/blackrock-authorizationurl-generate-api-openapi.yml
+  - type: SDKs
+    url: https://github.com/blackrock/aladdinsdk
+- aid: blackrock:blackrock-studionotifications-api
+  name: BlackRock Studio Notifications API
+  description: The StudioNotifications API from BlackRock — 2 operation(s) for studionotifications.
+  humanURL: https://www.blackrock.com/aladdin/products/aladdin-studio
+  baseURL: https://{defaultWebServer}/api/platform/infrastructure/token/v1
+  tags:
+  - StudioNotifications
+  properties:
+  - type: OpenAPI
+    url: openapi/blackrock-studionotifications-api-openapi.yml
+  - type: SDKs
+    url: https://github.com/blackrock/aladdinsdk
+- aid: blackrock:blackrock-studionotifications-batchcreate-api
+  name: BlackRock Studio Notifications:batch Create API
+  description: >-
+    The StudioNotifications:batchCreate API from BlackRock — 1 operation(s) for studionotifications:batchcreate.
+  humanURL: https://www.blackrock.com/aladdin/products/aladdin-studio
+  baseURL: https://{defaultWebServer}/api/platform/infrastructure/token/v1
+  tags:
+  - StudioNotifications:batchCreate
+  properties:
+  - type: OpenAPI
+    url: openapi/blackrock-studionotifications-batchcreate-api-openapi.yml
+  - type: SDKs
+    url: https://github.com/blackrock/aladdinsdk
+- aid: blackrock:blackrock-studionotifications-filter-api
+  name: BlackRock Studio Notifications:filter API
+  description: >-
+    The StudioNotifications:filter API from BlackRock — 1 operation(s) for studionotifications:filter.
+  humanURL: https://www.blackrock.com/aladdin/products/aladdin-studio
+  baseURL: https://{defaultWebServer}/api/platform/infrastructure/token/v1
+  tags:
+  - StudioNotifications:filter
+  properties:
+  - type: OpenAPI
+    url: openapi/blackrock-studionotifications-filter-api-openapi.yml
+  - type: SDKs
+    url: https://github.com/blackrock/aladdinsdk
+- aid: blackrock:blackrock-studiosubscriptions-api
+  name: BlackRock Studio Subscriptions API
+  description: The StudioSubscriptions API from BlackRock — 3 operation(s) for studiosubscriptions.
+  humanURL: https://www.blackrock.com/aladdin/products/aladdin-studio
+  baseURL: https://{defaultWebServer}/api/platform/infrastructure/token/v1
+  tags:
+  - StudioSubscriptions
+  properties:
+  - type: OpenAPI
+    url: openapi/blackrock-studiosubscriptions-api-openapi.yml
+  - type: SDKs
+    url: https://github.com/blackrock/aladdinsdk
+- aid: blackrock:blackrock-studiosubscriptions-batchcreate-api
+  name: BlackRock Studio Subscriptions:batch Create API
+  description: >-
+    The StudioSubscriptions:batchCreate API from BlackRock — 1 operation(s) for studiosubscriptions:batchcreate.
+  humanURL: https://www.blackrock.com/aladdin/products/aladdin-studio
+  baseURL: https://{defaultWebServer}/api/platform/infrastructure/token/v1
+  tags:
+  - StudioSubscriptions:batchCreate
+  properties:
+  - type: OpenAPI
+    url: openapi/blackrock-studiosubscriptions-batchcreate-api-openapi.yml
+  - type: SDKs
+    url: https://github.com/blackrock/aladdinsdk
+- aid: blackrock:blackrock-studiosubscriptions-filter-api
+  name: BlackRock Studio Subscriptions:filter API
+  description: >-
+    The StudioSubscriptions:filter API from BlackRock — 1 operation(s) for studiosubscriptions:filter.
+  humanURL: https://www.blackrock.com/aladdin/products/aladdin-studio
+  baseURL: https://{defaultWebServer}/api/platform/infrastructure/token/v1
+  tags:
+  - StudioSubscriptions:filter
+  properties:
+  - type: OpenAPI
+    url: openapi/blackrock-studiosubscriptions-filter-api-openapi.yml
+  - type: SDKs
+    url: https://github.com/blackrock/aladdinsdk
+- aid: blackrock:blackrock-token-checktokenexists-api
+  name: BlackRock Token:check Token Exists API
+  description: >-
+    The Token:checkTokenExists API from BlackRock — 1 operation(s) for token:checktokenexists.
+  humanURL: https://www.blackrock.com/aladdin/products/aladdin-studio
+  baseURL: https://{defaultWebServer}/api/platform/infrastructure/token/v1
+  tags:
+  - Token:checkTokenExists
+  properties:
+  - type: OpenAPI
+    url: openapi/blackrock-token-checktokenexists-api-openapi.yml
+  - type: SDKs
+    url: https://github.com/blackrock/aladdinsdk
+- aid: blackrock:blackrock-token-generate-api
+  name: BlackRock Token:generate API
+  description: The Token:generate API from BlackRock — 1 operation(s) for token:generate.
+  humanURL: https://www.blackrock.com/aladdin/products/aladdin-studio
+  baseURL: https://{defaultWebServer}/api/platform/infrastructure/token/v1
+  tags:
+  - Token:generate
+  properties:
+  - type: OpenAPI
+    url: openapi/blackrock-token-generate-api-openapi.yml
+  - type: SDKs
+    url: https://github.com/blackrock/aladdinsdk
+x-enrichment:
+  date: '2026-10-20'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v5

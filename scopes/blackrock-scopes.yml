@@ -1,0 +1,77 @@
+generated: '2026-10-20'
+method: derived
+source: openapi/blackrock-studio-notification-openapi.yml, openapi/blackrock-studio-subscription-openapi.yml,
+  openapi/blackrock-token-openapi.yml
+schemes:
+- name: OAuth2AccessCode
+  source: openapi/blackrock-studio-notification-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://client.blackrock.com/api/oauth2/default/v1/authorize
+    tokenUrl: https://client.blackrock.com/api/oauth2/default/v1/token
+  description: This API uses OAuth 2.0 with the access code flow.
+- name: OAuth2ClientCredentials
+  source: openapi/blackrock-studio-notification-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://client.blackrock.com/api/oauth2/default/v1/token
+  description: This API uses OAuth 2.0 with the client credentials flow.
+- name: OAuth2AccessCode
+  source: openapi/blackrock-studio-subscription-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://client.blackrock.com/api/oauth2/default/v1/authorize
+    tokenUrl: https://client.blackrock.com/api/oauth2/default/v1/token
+  description: This API uses OAuth 2.0 with the access code flow.
+- name: OAuth2ClientCredentials
+  source: openapi/blackrock-studio-subscription-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://client.blackrock.com/api/oauth2/default/v1/token
+  description: This API uses OAuth 2.0 with the client credentials flow.
+- name: OAuth2AccessCode
+  source: openapi/blackrock-token-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://client.blackrock.com/api/oauth2/default/v1/authorize
+    tokenUrl: https://client.blackrock.com/api/oauth2/default/v1/token
+  description: This API uses OAuth 2.0 with the access code flow.
+- name: OAuth2ClientCredentials
+  source: openapi/blackrock-token-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://client.blackrock.com/api/oauth2/default/v1/token
+  description: This API uses OAuth 2.0 with the client credentials flow.
+scopes:
+- scope: offline_access
+  description: This keeps you signed in to the app, even when you are not using it.
+  flows:
+  - authorizationCode
+  - clientCredentials
+  sources:
+  - openapi/blackrock-studio-notification-openapi.yml
+  - openapi/blackrock-studio-subscription-openapi.yml
+  - openapi/blackrock-token-openapi.yml
+- scope: platform.infrastructure.token.v1.Token:read
+  description: non-sensitive read
+  flows:
+  - authorizationCode
+  - clientCredentials
+  sources:
+  - openapi/blackrock-token-openapi.yml
+- scope: platform.studio.studio_notification.v1.StudioNotification
+  description: This grants access to all endpoints in the platform.studio.studio_notification.v1.StudioNotification
+    API
+  flows:
+  - authorizationCode
+  - clientCredentials
+  sources:
+  - openapi/blackrock-studio-notification-openapi.yml
+- scope: platform.studio.studio_notification.v1.StudioSubscription
+  description: This grants access to all endpoints in the platform.studio.studio_notification.v1.StudioSubscription
+    API
+  flows:
+  - authorizationCode
+  - clientCredentials
+  sources:
+  - openapi/blackrock-studio-subscription-openapi.yml
