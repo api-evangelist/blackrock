@@ -270,3 +270,9 @@ x-refined-from:
 - blackrock-token-swagger.json
 - blackrock-token-openapi.yml
 x-access-level: Internal
+x-provenance:
+  method: harvested
+  publisher: BlackRock
+  source: https://raw.githubusercontent.com/blackrock/aladdinsdk/HEAD/aladdinsdk/api/codegen/platform/infrastructure/token/v1/token/swagger.json
+  note: split by refine-openapis from the provider's own published document, verified by fetch (openapi/_original/*.fetch.json);
+    stamped by stamp-openapi-provenance.py (roadmap#793)

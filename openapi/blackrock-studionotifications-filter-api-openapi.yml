@@ -414,3 +414,9 @@ x-refined-from:
 - blackrock-studio_notification-swagger.json
 - blackrock-studio-notification-openapi.yml
 x-access-level: Internal
+x-provenance:
+  method: harvested
+  publisher: BlackRock
+  source: https://raw.githubusercontent.com/blackrock/aladdinsdk/HEAD/aladdinsdk/api/codegen/platform/studio/studio_notification/v1/studio_notification/swagger.json
+  note: split by refine-openapis from the provider's own published document, verified by fetch (openapi/_original/*.fetch.json);
+    stamped by stamp-openapi-provenance.py (roadmap#793)
