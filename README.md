@@ -1,4 +1,4 @@
-# BlackRock (blackrock)
+# BlackRock
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,84 +66,167 @@
 
 BlackRock is the world's largest asset manager with over $10 trillion in assets under management. Through its Aladdin platform, BlackRock provides institutional investors, wealth managers, and financial services firms with risk analytics, portfolio management, and data capabilities via APIs. The Aladdin platform powers investment operations for many of the world's largest pension funds, insurers, and asset managers.
 
-**URL:** [https://www.blackrock.com](https://www.blackrock.com)
+**Areas:** Asset Management · Finance · Fintech · Investment Management · Portfolio Management · Risk Analytics · Fortune 500
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## BlackRock on APIs.io
 
-## Tags:
+Everything profiled for BlackRock is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/blackrock/](https://apis.io/providers/blackrock/)** — or go straight to one of the APIs or properties below.
 
- - Asset Management, Finance, FinTech, Investment Management, Portfolio Management, Risk Analytics
+### APIs (10)
 
-## Timestamps
+- [BlackRock Aladdin API](https://apis.io/apis/blackrock/aladdin-api/) — The Aladdin Developer program provides APIs that enable clients to access BlackRock's Aladdin platform capabilities programmatically. Aladdin APIs support…
+- [BlackRock Authorization Url:generate API](https://apis.io/apis/blackrock/blackrock-authorizationurl-generate-api/) — The AuthorizationUrl:generate API from BlackRock — 1 operation(s) for authorizationurl:generate.
+- [BlackRock Studio Notifications API](https://apis.io/apis/blackrock/blackrock-studionotifications-api/) — The StudioNotifications API from BlackRock — 2 operation(s) for studionotifications.
+- [BlackRock Studio Notifications:batch Create API](https://apis.io/apis/blackrock/blackrock-studionotifications-batchcreate-api/) — The StudioNotifications:batchCreate API from BlackRock — 1 operation(s) for studionotifications:batchcreate.
+- [BlackRock Studio Notifications:filter API](https://apis.io/apis/blackrock/blackrock-studionotifications-filter-api/) — The StudioNotifications:filter API from BlackRock — 1 operation(s) for studionotifications:filter.
+- [BlackRock Studio Subscriptions API](https://apis.io/apis/blackrock/blackrock-studiosubscriptions-api/) — The StudioSubscriptions API from BlackRock — 3 operation(s) for studiosubscriptions.
+- [BlackRock Studio Subscriptions:batch Create API](https://apis.io/apis/blackrock/blackrock-studiosubscriptions-batchcreate-api/) — The StudioSubscriptions:batchCreate API from BlackRock — 1 operation(s) for studiosubscriptions:batchcreate.
+- [BlackRock Studio Subscriptions:filter API](https://apis.io/apis/blackrock/blackrock-studiosubscriptions-filter-api/) — The StudioSubscriptions:filter API from BlackRock — 1 operation(s) for studiosubscriptions:filter.
+- [BlackRock Token:check Token Exists API](https://apis.io/apis/blackrock/blackrock-token-checktokenexists-api/) — The Token:checkTokenExists API from BlackRock — 1 operation(s) for token:checktokenexists.
+- [BlackRock Token:generate API](https://apis.io/apis/blackrock/blackrock-token-generate-api/) — The Token:generate API from BlackRock — 1 operation(s) for token:generate.
 
-- **Created:** 2026-03-21
-- **Modified:** 2026-04-21
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### BlackRock Aladdin API
-The Aladdin Developer program provides APIs that enable clients to access BlackRock's Aladdin platform capabilities programmatically. Aladdin APIs support portfolio analytics, risk reporting, data access, order management, and workflow automation for institutional asset managers, wealth managers, and financial services clients.
+#### Agentic access (1)
 
-**Human URL:** [https://www.blackrock.com/aladdin/products/aladdin-developer](https://www.blackrock.com/aladdin/products/aladdin-developer)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags:
+- [Blackrock Agentic Access](https://apis.io/agentic-access/blackrock/blackrock-agentic-access/)
 
- - Asset Management, Finance, Portfolio Management, Risk Analytics
+#### JSON Schema (2)
 
-#### Properties
+The data models the API reads and writes.
 
-- [Documentation](https://www.blackrock.com/aladdin/products/aladdin-developer)
-- [Python SDK (AladdinSDK)](https://github.com/blackrock/aladdinsdk)
-- [JSON Schema - Portfolio](json-schema/blackrock-portfolio-schema.json)
-- [JSON Schema - Risk Report](json-schema/blackrock-risk-report-schema.json)
-- [JSON-LD Context](json-ld/blackrock-context.jsonld)
-- [Example - Portfolio](examples/blackrock-portfolio-example.json)
-- [Example - Risk Report](examples/blackrock-risk-report-example.json)
+- [BlackRock Aladdin Portfolio](https://apis.io/schemas/blackrock/blackrock-portfolio/)
+- [BlackRock Aladdin Risk Report](https://apis.io/schemas/blackrock/blackrock-risk-report/)
 
-## Common Properties
+#### JSON Structure (2)
+
+Data models expressed in JSON Structure.
+
+- [Blackrock Portfolio Structure](https://apis.io/json-structure/blackrock/blackrock-portfolio-structure/)
+- [Blackrock Risk Report Structure](https://apis.io/json-structure/blackrock/blackrock-risk-report-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Blackrock Context](https://apis.io/jsonld/blackrock/blackrock-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [BlackRock Aladdin API Vocabulary](https://apis.io/vocabularies/blackrock/blackrock-vocabulary/)
+
+#### Examples (2)
+
+Example requests and responses.
+
+- [Blackrock Portfolio Example](https://apis.io/examples/blackrock/blackrock-portfolio-example/)
+- [Blackrock Risk Report Example](https://apis.io/examples/blackrock/blackrock-risk-report-example/)
+
+#### Governance rules (3)
+
+Spectral rulesets for the provider's contracts.
+
+- [BlackRock — jsonschema rules](https://apis.io/rules/blackrock/blackrock-jsonschema-spectral-rules/)
+- [BlackRock API Rules](https://apis.io/rules/blackrock/blackrock-rules/)
+- [BlackRock API Rules](https://apis.io/rules/blackrock/blackrock-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Blackrock Authentication](https://apis.io/security/blackrock/blackrock-authentication/)
+- [Blackrock Domain Security](https://apis.io/security/blackrock/blackrock-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Blackrock Scopes](https://apis.io/scopes/blackrock/blackrock-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Blackrock Plans Pricing](https://apis.io/plans/blackrock/blackrock-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Blackrock Rate Limits](https://apis.io/rate-limits/blackrock/blackrock-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Blackrock Finops](https://apis.io/finops/blackrock/blackrock-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.blackrock.com)
-- [Documentation](https://www.blackrock.com/aladdin/products/aladdin-developer)
-- [GitHub Organization](https://github.com/blackrock)
-- [Terms of Service](https://www.blackrock.com/us/individual/regulatory/privacy-policy)
-- [Privacy Policy](https://www.blackrock.com/us/individual/regulatory/privacy-policy)
+- [Documentation](https://www.blackrock.com/aladdin/products/aladdin-studio)
 - [Blog](https://www.blackrock.com/us/individual/insights)
-- [Spectral Rules](rules/blackrock-spectral-rules.yml)
-- [Naftiko Capability](capabilities/blackrock-aladdin.yaml)
-- [Vocabulary](vocabulary/blackrock-vocabulary.yaml)
+- [Terms of service](https://www.blackrock.com/corporate/compliance/terms-and-conditions)
+- [Privacy policy](https://www.blackrock.com/corporate/compliance/privacy-notice)
+- [GitHub](https://github.com/blackrock)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Aladdin Risk Analytics | Multi-asset risk measurement and attribution capabilities accessible via API, including VaR, factor exposures, stress testing, and scenario analysis. |
-| Portfolio Management APIs | APIs for portfolio construction, optimization, rebalancing, and compliance monitoring integrated with the Aladdin operating system. |
-| Data Access Layer | Structured access to market data, security reference data, and portfolio data via RESTful APIs with enterprise data governance. |
-| Order Management System Integration | APIs for trade order management, execution, and settlement workflows integrating with OMS and EMS systems. |
-| AladdinSDK | Open-source Python SDK providing programmatic access to Aladdin APIs with authentication, pagination, and data transformation utilities. |
-| Workflow Automation | Event-driven workflow APIs enabling clients to automate investment operations processes and integrate with third-party systems. |
+**Kin Score 37.1** — thin · rubric 0.24.0 · scored 2026-10-20
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 59.0 |
+| Contract governance | 43.6 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 18.4 |
 
-| Name | Description |
-|------|-------------|
-| Institutional Risk Reporting | Institutional investors use Aladdin APIs to generate regulatory risk reports, UCITS compliance reports, and investor disclosures. |
-| Portfolio Analytics Integration | Wealth managers and RIAs integrate Aladdin risk analytics into their own client-facing and advisor-facing platforms. |
-| Fintech Data Integration | FinTech companies access structured investment data through Aladdin APIs to power analytics, research, and advisory products. |
-| Automated Rebalancing | Portfolio managers automate rebalancing workflows using Aladdin APIs to trigger trades based on drift thresholds and target allocations. |
-| Multi-Manager Aggregation | Family offices and fund-of-funds use Aladdin APIs to aggregate portfolio data across multiple managers into a single risk view. |
+**Agent readiness 32.7** — agent-ready
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | unknown |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-| Name | Description |
-|------|-------------|
-| Charles River Development | Aladdin integrates with Charles River IMS for order management and compliance workflow automation. |
-| SimCorp Dimension | Integration between Aladdin risk analytics and SimCorp's portfolio management and accounting systems. |
-| Bloomberg | Market data and analytics integrations with Bloomberg Data License and Bloomberg PORT for risk and performance. |
-| Refinitiv | Security master data and market data integrations with Refinitiv Datascope and Eikon platforms. |
+**Regulatory alignment 26.5** — Horizontal (data, software, accessibility, platform)
 
-## Maintainers
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/blackrock/](https://apis.io/providers/blackrock/).
 
-**FN:** Kin Lane
+## How this profile is made
 
-**Email:** kin@apievangelist.com
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for BlackRock: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/blackrock/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
